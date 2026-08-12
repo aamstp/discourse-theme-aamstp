@@ -18,6 +18,17 @@ html {
   --d-nav-color--hover: #{$accent-interface-color} !important;
   --search-color: #{$accent-interface-color} !important;
 
+  // Sidebar : fond des éléments sélectionnés/survolés (formule oklch de Horizon,
+  // reprise à l'identique mais dérivée du rose interface plutôt que du bleu Horizon)
+  --d-selected: light-dark(
+    oklch(from #{$accent-interface-color} 92% calc(c * 0.5) h),
+    oklch(from #{$accent-interface-color} calc(l * 0.7) calc(c * 0.25) h)
+  ) !important;
+
+  // Icônes du sélecteur de mode clair/sombre : noir, pas de teinte
+  --header_primary-medium: #{$text-color} !important;
+  --header_primary-low-mid: #{$text-color} !important;
+
   // Texte : jamais coloré par l'accent, noir gras
   --link-color: #{$text-color} !important;
   --link-color-hover: #{$text-color} !important;
@@ -32,5 +43,12 @@ html {
 }
 
 a {
+  font-weight: 700;
+}
+
+// Titre de la bannière d'accueil : utilise var(--search-color) dans Horizon
+// (donc l'accent rose) — on le force en noir gras pour la lisibilité.
+.welcome-banner__title {
+  color: #{$text-color} !important;
   font-weight: 700;
 }
