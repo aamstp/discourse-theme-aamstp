@@ -3,31 +3,5 @@
   "component": true,
   "authors": "Rockfort",
   "theme_version": "0.1.0",
-  "minimum_discourse_version": "3.0.0",
-  "color_schemes": {
-    "AAMSTP": {
-      "primary": "1f2937",
-      "secondary": "ffffff",
-      "tertiary": "e72775",
-      "quaternary": "e72775",
-      "header_background": "ffffff",
-      "header_primary": "1f2937",
-      "highlight": "ffc107",
-      "danger": "dc2626",
-      "success": "047857",
-      "love": "e72775"
-    },
-    "AAMSTP Dark": {
-      "primary": "e6edf3",
-      "secondary": "161b22",
-      "tertiary": "e72775",
-      "quaternary": "e72775",
-      "header_background": "161b22",
-      "header_primary": "e6edf3",
-      "highlight": "fbbf24",
-      "danger": "ef4444",
-      "success": "22c55e",
-      "love": "e72775"
-    }
-  }
+  "minimum_discourse_version": "3.0.0"
 }
