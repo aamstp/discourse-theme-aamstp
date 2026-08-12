@@ -26,8 +26,8 @@ html {
 
   // Fond ambiant (html/body/header/sidebar/composer/chat)
   --background-color: light-dark(
-    #{$background-color-light},
-    #{$background-color-dark}
+    oklch(from #{$background-color-light} 96% calc(c * 0.125) h),
+    oklch(from #{$background-color-dark} 10% 0.025 h)
   ) !important;
 }
 
