@@ -30,6 +30,11 @@ html {
   --header_primary-low-mid: #{$text-color} !important;
 
   // Texte : jamais coloré par l'accent, noir gras
+  // --d-link-color est la variable cœur Discourse qui pilote la couleur de TOUS
+  // les liens génériques (règle "a, a:visited, a:hover, a:active" du CSS cœur) ;
+  // --link-color/--link-color-hover ne sont que des variables Horizon utilisées
+  // ponctuellement (sidebar). Il faut surcharger les deux.
+  --d-link-color: #{$text-color} !important;
   --link-color: #{$text-color} !important;
   --link-color-hover: #{$text-color} !important;
   --d-sidebar-link-color: #{$text-color} !important;
