@@ -40,6 +40,39 @@ html {
     oklch(from #{$background-color-light} 96% calc(c * 0.125) h),
     oklch(from #{$background-color-dark} 10% 0.025 h)
   ) !important;
+
+  // Variable cœur Discourse "--tertiary" et ses teintes auto-générées,
+  // utilisées directement (hors color_definitions.scss) par plusieurs
+  // fichiers Horizon : boutons (buttons.scss), cartes "contexte riche"
+  // (high-context-cards.scss), composer, topic.scss, topic-cards.scss
+  // (ombre), misc.scss, mobile-stuff.scss, chat.scss. Sans cette
+  // surcharge elles restent dérivées du bleu Horizon d'origine.
+  --tertiary: #{$accent-interface-color} !important;
+  --tertiary-rgb: 231, 39, 117 !important;
+  --tertiary-very-low: light-dark(
+    oklch(from #{$accent-interface-color} 97% calc(c * 0.15) h),
+    oklch(from #{$accent-interface-color} 15% calc(c * 0.15) h)
+  ) !important;
+  --tertiary-low: light-dark(
+    oklch(from #{$accent-interface-color} 92% calc(c * 0.3) h),
+    oklch(from #{$accent-interface-color} 25% calc(c * 0.3) h)
+  ) !important;
+  --tertiary-medium: light-dark(
+    oklch(from #{$accent-interface-color} 70% calc(c * 0.7) h),
+    oklch(from #{$accent-interface-color} 55% calc(c * 0.6) h)
+  ) !important;
+  --tertiary-high: light-dark(
+    oklch(from #{$accent-interface-color} 35% c h),
+    oklch(from #{$accent-interface-color} 80% c h)
+  ) !important;
+  --tertiary-300: light-dark(
+    oklch(from #{$accent-interface-color} 85% calc(c * 0.6) h),
+    oklch(from #{$accent-interface-color} 40% calc(c * 0.6) h)
+  ) !important;
+  --tertiary-700: light-dark(
+    oklch(from #{$accent-interface-color} 40% c h),
+    oklch(from #{$accent-interface-color} 65% c h)
+  ) !important;
 }
 
 a {
