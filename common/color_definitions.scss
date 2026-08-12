@@ -73,6 +73,14 @@ html {
     oklch(from #{$accent-interface-color} 40% c h),
     oklch(from #{$accent-interface-color} 65% c h)
   ) !important;
+
+  // Ombre au survol/sélection des cartes de sujets (topic-cards.scss), calculée par
+  // Horizon à partir de --tertiary-rgb (donc rose ici) : on la rattache au vert de
+  // fond plutôt qu'à l'accent interface, pour rester cohérent avec le fond de page.
+  --topic-card-shadow: light-dark(
+    rgba(#{$background-color-light}, 0.1),
+    rgba(#{$background-color-dark}, 0.1)
+  ) !important;
 }
 
 a {
