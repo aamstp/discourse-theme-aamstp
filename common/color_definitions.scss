@@ -93,3 +93,11 @@ a {
   color: #{$text-color} !important;
   font-weight: 700;
 }
+
+// Titres de sujets dans les listes (ex: page "Mes publications") : le CSS cœur
+// Discourse (.topic-title) les colore directement en var(--tertiary) — donc rose
+// ici. On les force en noir gras comme le reste du texte.
+.topic-title {
+  color: #{$text-color} !important;
+  font-weight: 700;
+}
