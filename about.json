@@ -1,0 +1,7 @@
+{
+  "name": "AAMSTP",
+  "component": true,
+  "authors": "Rockfort",
+  "theme_version": "0.1.0",
+  "minimum_discourse_version": "3.0.0"
+}
