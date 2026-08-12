@@ -1,0 +1,36 @@
+// Surcharge des custom properties calculées par Horizon (themes/horizon/common/color_definitions.scss).
+// Objectif : le rose AAMSTP n'accentue QUE les éléments d'interface (boutons, sliders,
+// sélecteur clair/sombre) ; les textes/liens restent en noir gras, jamais colorés.
+// Le fond ambiant passe au vert AAMSTP.
+
+$accent-interface-color: #e72775;
+$text-color: #1a1a1a;
+$background-color-light: #008e25;
+$background-color-dark: #22c55e;
+
+html {
+  // Interface : fonds pleins (boutons "Créer un sujet", poignées de slider/timeline,
+  // sélecteur de mode clair/sombre, nav/recherche actifs)
+  --accent-color: #{$accent-interface-color} !important;
+  --tertiary-hover: #{$accent-interface-color} !important;
+  --button-box-shadow: #{$accent-interface-color} !important;
+  --d-nav-color--active: #{$accent-interface-color} !important;
+  --d-nav-color--hover: #{$accent-interface-color} !important;
+  --search-color: #{$accent-interface-color} !important;
+
+  // Texte : jamais coloré par l'accent, noir gras
+  --link-color: #{$text-color} !important;
+  --link-color-hover: #{$text-color} !important;
+  --d-sidebar-link-color: #{$text-color} !important;
+  --d-sidebar-active-color: #{$text-color} !important;
+
+  // Fond ambiant (html/body/header/sidebar/composer/chat)
+  --background-color: light-dark(
+    #{$background-color-light},
+    #{$background-color-dark}
+  ) !important;
+}
+
+a {
+  font-weight: 700;
+}
